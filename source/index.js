@@ -14,16 +14,17 @@
 const PORT = process.env.PORT;
 const HOST = process.env.HOST;
 
+const configure = require('./config/environment');
+configure();
+
 console.log(`> Using environment: ${process.env.NODE_ENV}`);
 
-const configure = require('./config/environment');
 const fileRouter = require('./routes/file.routes');
 const apiRouter = require('./routes/api.routes');
 const middleware = require('./middleware');
 const slower = require('slower');
 const app = slower();
 
-configure();
 
 app.use(middleware.ratelimit);
 
