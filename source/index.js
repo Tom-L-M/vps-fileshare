@@ -5,10 +5,12 @@
     // File rename          PATCH  /file/<filename>     { message: '{new-name-string}' }
 
 // Resources Accountancy: (requires auth)
-    // File listing         GET    /api/files
     // Server status        GET|HEAD    /api/status
-    // Total storage use    GET    /api/usage
+    // File listing         GET    /api/files
     // Total file count     GET    /api/count
+    // Total storage use    GET    /api/usage
+    // Last log lines       GET    /api/logs  ?lines=X
+    // Logfiles listing     GET    /api/logfiles
 
 
 const PORT = process.env.PORT;
