@@ -1,0 +1,23 @@
+# testing
+test/
+# env environment variable files
+.env
+.env.dev
+# logs
+.logs/
+*.log
+# test js files
+*.test.js
+# Ignores
+.npmignore
+# publishing config
+publish.json
+# npm
+node_modules/
+package-lock.json
+# internal storage
+.storage/
+# Authentication data
+.auth/*
+.auth/tokens.json
+/.auth
