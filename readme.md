@@ -24,6 +24,18 @@ Install dependencies:
 
 `npm i`
 
+Create .env from template:
+
+`mv template.env .env`
+
+Modify auth stash:
+
+Default credentials are "user"/"password".
+
+To modify the auth stash, add a \<user>: \<password> entry to tokens.json,
+Where 'password' must be a sha256 hash in HEX format.
+
+
 <br/>
 
 To run in development mode:
