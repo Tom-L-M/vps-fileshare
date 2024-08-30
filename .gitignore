@@ -23,7 +23,7 @@ package-lock.json
 /.auth
 # Builders
 build-release.js
-/.release
-/.release/*
-/.release/*.zip
+/release
+/release/*
+/release/*.zip
 *.zip

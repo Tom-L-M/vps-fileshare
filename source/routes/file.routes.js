@@ -1,8 +1,8 @@
 // File Management: (requires auth)
-    // File download        GET    /file/<filename>
-    // File upload          POST   /file/<filename>     (send file data in body)
-    // File removal         DELETE /file/<filename>
-    // File rename          PATCH  /file/<filename>     { message: '{new-name-string}' }
+    // File download        GET         /file/<filename>
+    // File upload          POST        /file/<filename>     (send file data in body)
+    // File removal         DELETE      /file/<filename>
+    // File rename          PATCH       /file/<filename>     { message: '{new-name-string}' }
 
 
 const router = require('slower').Router();

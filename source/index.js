@@ -1,16 +1,17 @@
 // File Management: (requires auth)
-    // File download        GET    /file/<filename>
-    // File upload          POST   /file/<filename>     (send file data in body)
-    // File removal         DELETE /file/<filename>
-    // File rename          PATCH  /file/<filename>     { message: '{new-name-string}' }
+    // File download        GET         /file/<filename>
+    // File upload          POST        /file/<filename>     (send file data in body)
+    // File removal         DELETE      /file/<filename>
+    // File rename          PATCH       /file/<filename>     { message: '{new-name-string}' }
 
 // Resources Accountancy: (requires auth)
+    // Server version       GET         /api/version
     // Server status        GET|HEAD    /api/status
-    // File listing         GET    /api/files
-    // Total file count     GET    /api/count
-    // Total storage use    GET    /api/usage
-    // Last log lines       GET    /api/logs  ?lines=X
-    // Logfiles listing     GET    /api/logfiles
+    // File listing         GET         /api/files
+    // Total file count     GET         /api/count
+    // Total storage use    GET         /api/usage
+    // Last log lines       GET         /api/logs  ?lines=X
+    // Logfiles listing     GET         /api/logfiles
 
 
 const PORT = process.env.PORT;

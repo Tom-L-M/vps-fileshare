@@ -1,6 +1,11 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const loggerConfig = require('../config/logger');
+const { version } = require('../../package.json');
+
+function api_version (req, res, next) {
+    return res.status(200).json({ message: version, status:200 });
+}
 
 function api_status_HEAD (req, res, next) {
     return res.status(200).end();
@@ -76,6 +81,7 @@ function api_e404 (req, res, next) {
 }
 
 module.exports = {
+    api_version,
     api_status_HEAD,
     api_status, 
     api_file_listing, 
