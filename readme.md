@@ -28,6 +28,9 @@ Create .env from template:
 
 `mv template.env .env`
 
+
+<br/>
+
 Modify auth stash:
 
 Default credentials are "user"/"password".
@@ -38,10 +41,7 @@ Where 'password' must be a sha256 hash in HEX format.
 
 <br/>
 
-To run in development mode:
 
-`npm run dev`
-
-To run in production mode:
+To run :
 
 `npm start`
