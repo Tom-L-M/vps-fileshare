@@ -57,7 +57,7 @@ function api_logs (req, res, next) {
         lfile = path.join(loggerConfig.dir, lfile);
         const data = fs.readFileSync(lfile, 'utf-8');
         const divided = data.split('\n');
-        const actual = divided.slice(-lines);
+        const actual = divided.slice(-(lines+1)).filter(v => !!v);
         return res.status(200).json({ message: actual, status: 200 });
 
     } catch (err) {
