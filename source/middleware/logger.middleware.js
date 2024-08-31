@@ -9,7 +9,8 @@ const expiration = config.expiration || null;
 function cleanlogdir (dir, expirationDays) {
     const files = fs.readdirSync(dir);
     const today = new Date().getDate();
-    for (let file of files) {
+    for (let i = 0; i < files.length - 1; i++) {
+        let file = files[i];
         const datestring = file.slice(0, file.lastIndexOf('.')).replaceAll('_',':');
         const day = new Date(datestring).getDate();
         if (today - day >= expirationDays)
